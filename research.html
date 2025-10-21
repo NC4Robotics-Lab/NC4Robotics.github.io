@@ -63,6 +63,35 @@
     <link rel="stylesheet" href="assets/css/e-style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
+    <style>
+    /* Makes the whole card feel interactive; keeps video boxed if ratio polyfill isn't active */
+    .video-card { cursor: pointer; }
+    .autoplay-video { width: 100%; height: 100%; display: block; background: #805454; }
+
+    /* Force titles to render under the videos in this section */
+    #researchVideosSection .video-card .card-body {
+        display: block !important;
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        padding: 12px 16px !important;
+        background: transparent !important;
+    }
+    #researchVideosSection .video-card .card-title {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        margin: 0 !important;
+        font-weight: 600;
+        color: #0130a8 !important; /* ensure visible text */
+    }
+
+    /* Keep the video box tidy */
+    #researchVideosSection .video-card .ratio { margin: 0; }
+    </style>
+
     <script src="assets/js/preload.js"></script>
     <script src="assets/js/research-gallery.js"></script>
 </head>
@@ -157,6 +186,81 @@
             </div>
         </div>
 
+        <div class="container content" id="researchVideosSection">
+            <div class="row title">
+                <div class="col-lg-12">
+                    <div class="section-title__tagline-shape-1"></div>
+                    <span class="section-title__tagline">Associated Video Presentations</span>
+                    <div class="section-title__tagline-shape-2"></div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Video 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card video-card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video
+                        class="autoplay-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        src="content/research_videos/Video_NeuroVIO.mp4"
+                        title="Visual-Inertial Underwater Vehicle Pose Estimation">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Visual-Inertial Underwater Vehicle Pose Estimation</h5>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card video-card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video
+                        class="autoplay-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        src="content/research_videos/Video_Semantic 3D Underwater Scene Analysis for Ecological Monitoring_.mp4"
+                        title="Semantic 3D Underwater Scene Analysis">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Semantic 3D Underwater Scene Analysis</h5>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card video-card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video
+                        class="autoplay-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        src="content/research_videos/Video_Neuromorphic Multi Robot Navigation.mp4"
+                        title="Neuromorphic Multi Robot Navigation">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Neuromorphic Multi Robot Navigation</h5>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="teamPageWrapper" class="container resourceForNow">
             <div id="faculty" class="section">
                 <div class="title">
@@ -172,7 +276,9 @@
                             </div>
                             <div class="text">
                                 <ol>
-                                    <li><a href="" target="_blank"> ElTobgui, Rim et.al. "Vision-Language Models for Underwater Ecological Monitoring." 2025 IEEE International Workshop on Metrology for the Sea; Learning to Measure Sea Health Parameters (MetroSea). IEEE, 2025.</a></li>
+                                    <li><a href="https://kuacae-my.sharepoint.com/:b:/g/personal/vidya_sudevan_ku_ac_ae/EdzGr4JTDuxAkTRaWRqDIB0BWxitP_Tj8DALqNGJnyaPig?e=jnm6OK" target="_blank"> Rashed, Abdalla, et al. "Towards Neuromorphic Computing on Edge: A Survey on Efficient Techniques for Spiking Neural Networks." IROS 2024Workshop on Edge AI for Robotics: Emerging Technology and Application. IEEE, 2025.</a></li>
+                                    <li><a href="https://kuacae-my.sharepoint.com/:b:/g/personal/vidya_sudevan_ku_ac_ae/ES_BVwKGf8RIluc-aUsx5gUBPlhOiILFoIpsB3-PKgCg2Q?e=73vUfn" target="_blank"> Sudevan, Vidya, et al. "NeuroVIO: SNN Framework for Visual-Inertial Pose Estimation." IROS 2024Workshop on Edge AI for Robotics: Emerging Technology and Application. IEEE, 2025.</a></li>
+                                    <li><a href="https://kuacae-my.sharepoint.com/:b:/g/personal/vidya_sudevan_ku_ac_ae/EfP1vV4Q4GRFl8-twY4OITsBDRDPH6rEzMnCeuZSQRU-Yw?e=jrkOn1" target="_blank"> ElTobgui, Rim et.al. "Vision-Language Models for Underwater Ecological Monitoring." 2025 IEEE International Workshop on Metrology for the Sea; Learning to Measure Sea Health Parameters (MetroSea). IEEE, 2025.</a></li>
                                     <li><a href="https://ieeexplore.ieee.org/abstract/document/10979075" target="_blank">Kausar, Rizwana, et al. "Bio-Inspired Home Localization Using Event-Based Vision and Spiking Neural Networks in Simulated Environment." 2025 IEEE International Conference on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR). IEEE, 2025.</a></li>
                                     <li><a href=" https://ieeexplore.ieee.org/abstract/document/10979088" target="_blank"> Sudevan, Vidya, et al. "Processing Continuous-Valued Signals for Multimodal Spike-Based Pose Regression." 2025 IEEE International Conference on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR). IEEE, 2025. </a></li>
                                     <li><a href=" https://arxiv.org/abs/2504.11482 " target="_blank"> Sudevan, Vidya, et al. "snnTrans-DHZ: A Lightweight Spiking Neural Network Architecture for Underwater Image Dehazing." arXiv preprint arXiv:2504.11482 (2025). </a></li>
@@ -289,6 +395,65 @@
 
     <!-- template js -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+    (function () {
+        // Find all cards and their videos
+        const cards  = Array.from(document.querySelectorAll(".video-card"));
+        const videos = Array.from(document.querySelectorAll(".autoplay-video"));
+
+        // Ensure silent autoplay on load (muted + loop is already in HTML)
+        videos.forEach(v => {
+        // In case the browser delays autoplay, keep it muted and try to play
+        const startSilent = () => {
+            v.muted = true;
+            v.removeAttribute("controls");
+            v.play().catch(() => {});
+        };
+        if (v.readyState >= 1) startSilent();
+        else v.addEventListener("loadedmetadata", startSilent, { once: true });
+        });
+
+        // Activate one video (unmute + show controls), keep others silent
+        function activateVideo(targetVideo) {
+        videos.forEach(o => {
+            if (o !== targetVideo) {
+            o.muted = true;
+            o.removeAttribute("controls");
+            if (o.paused) o.play().catch(() => {});
+            }
+        });
+        targetVideo.muted = false;
+        targetVideo.setAttribute("controls", "");
+        targetVideo.play().catch(() => {
+            // If autoplay-with-sound is blocked, at least the controls are visible
+            targetVideo.setAttribute("controls", "");
+        });
+        }
+
+        // Clicking ANYWHERE on the card toggles sound for its video
+        cards.forEach(card => {
+        const v = card.querySelector(".autoplay-video");
+        if (!v) return;
+
+        card.addEventListener("click", (e) => {
+            // Don't interrupt built-in control clicks (scrubber, buttons)
+            const tag = (e.target || {}).tagName || "";
+            if (tag === "BUTTON" || tag === "INPUT" || tag === "TRACK") return;
+            activateVideo(v);
+        });
+
+        // Keyboard accessibility
+        card.setAttribute("tabindex", "0");
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            activateVideo(v);
+            }
+        });
+        });
+    })();
+    </script>
 
 </body>
 
